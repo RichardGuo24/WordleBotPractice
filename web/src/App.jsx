@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Header from "./Header.jsx"
-import Home from "./Home.jsx"
-import PlayerVsBot from "./PlayerVsBot.jsx"
+import Header from "./components/Header.jsx"
+import Home from "./components/Home.jsx"
+import PlayerVsBot from "./components/PlayerVsBot.jsx"
 
 
 
