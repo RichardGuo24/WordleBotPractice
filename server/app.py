@@ -1,8 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import random
 from solver import (
     feedback_pattern, filter_candidates, pick_best_guess,
-    start_candidates, is_valid_guess, VALID
+    start_candidates, get_secret_words, is_valid_guess, VALID
 )
 
 app = Flask(__name__)
@@ -12,6 +13,15 @@ CORS(app)
 @app.get("/health")
 def health():
     return {"ok": True}
+
+@app.get("/random_answer")
+def random_answer():
+    words = get_secret_words()
+    if not words:
+        return {"error": "No words available"}, 500
+    return {"answer": random.choice(list(words)).lower()}
+
+
 
 @app.post("/feedback")
 def api_feedback():
