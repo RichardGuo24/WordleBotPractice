@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import random
+import os
 from solver import (
     feedback_pattern, filter_candidates, pick_best_guess,
     start_candidates, get_secret_words, is_valid_guess, VALID
 )
+DEFAULT_FIRST_GUESS = os.environ.get("DEFAULT_FIRST_GUESS", "raise")
 
 app = Flask(__name__)
 # Needed in local dev because web runs at :5173 and server at :5001 (different origins)
@@ -54,6 +56,29 @@ def api_solve():
     history = data.get("history", [])
     mode = (data.get("mode") or "easy").lower()
     sample = int(data.get("sample", 800))
+    
+    if not history:
+        cands = start_candidates()
+        guess = DEFAULT_FIRST_GUESS
+        # (Optional) sanity check it's allowed; fall back if not
+        if not is_valid_guess(guess):
+            guess = "slate"
+
+        # Keep your UI happy with a quick, lightweight estimate:
+        from collections import Counter
+        import random
+        c_list = list(cands)
+        n = len(c_list)
+        eval_list = c_list if n <= 600 else random.sample(c_list, 600)
+        buckets = Counter(feedback_pattern(guess, w) for w in eval_list)
+        m = len(eval_list)
+        expected = sum((cnt / m) * (cnt * (n / m)) for cnt in buckets.values()) if m else 0.0
+
+        return jsonify({
+            "nextGuess": guess,
+            "candidates": len(cands),
+            "expectedRemaining": expected
+        })
 
     # rebuild candidates from scratch based on history
     cands = start_candidates()
