@@ -46,7 +46,7 @@ def expected_remaining(guess: str, cands: list[str]) -> float:
 def pick_best_guess(cands: set[str],
                     valid_guesses: set[str],
                     easy_mode: bool = True,
-                    sample_limit: int = 800) -> str:
+                    sample_limit: int = 300) -> str:
     """
     Choose next guess.
     - easy_mode=True: consider any valid guess (better splitting)
