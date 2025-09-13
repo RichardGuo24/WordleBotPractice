@@ -70,9 +70,18 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <h2 id="usage">Usage</h2>
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+<div align="center">
+  <img src="images/WordlePractice.gif" alt="Wordle Solver Demo" width="600"/>
+</div>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+The main page is a place where you can practice Wordle solutions as many times as you want with our algorithm help.
+
+<div align="center">
+  <img src="images/WordlePractice.gif" alt="Wordle Solver Demo" width="600"/>
+</div>
+<div align="center">
+  <img src="images/WordlePractice.gif" alt="Wordle Solver Demo" width="600"/>
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -93,16 +102,23 @@ This approach is similar to *20 Questions*: each guess partitions the space of a
 
 <h2 id="contributing">Contributing</h2>
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are welcome! This solver is meant to be both an **educational tool** and a **fun project**, so improvements of all kinds are appreciated:
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+- 🧮 Algorithm optimizations (faster pruning, new heuristics, etc.)  
+- 🎨 Frontend/UI improvements (better layout, animations, styling)  
+- 📊 New features (stats tracking, hard mode, challenge modes)  
+- 📝 Documentation updates or clearer explanations  
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+If you’d like to help, here’s the suggested workflow:
+
+1. **Fork** the repository  
+2. **Create a feature branch** (`git checkout -b feature/YourFeatureName`)  
+3. **Commit** your changes (`git commit -m 'Add feature: YourFeatureName'`)  
+4. **Push** to your branch (`git push origin feature/YourFeatureName`)  
+5. **Open a Pull Request** describing what you’ve added  
+
+Even small contributions — like fixing typos or improving explanations — make a big difference.  
+And if you find the project useful, don’t forget to ⭐️ star the repo!
 
 
 <h2 id="contact">Contact</h2>
