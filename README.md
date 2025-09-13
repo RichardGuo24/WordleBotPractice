@@ -37,7 +37,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#how-it-works">Usage</a></li>
+    <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -53,8 +53,6 @@ Wordle at its core is a simple game. But when you come across a word like PARER.
 Introducing my own Wordle practice bot! You can test it below here.
 https://wordlepractice.vercel.app/
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 ### Built With
@@ -65,7 +63,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![Flask][Flask]][Flask-url]
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <h2 id="usage">Usage</h2>
@@ -74,16 +71,32 @@ This section should list any major frameworks/libraries used to bootstrap your p
   <img src="images/WordlePractice.gif" alt="Wordle Solver Demo" width="600"/>
 </div>
 
-The main page is a place where you can practice Wordle solutions as many times as you want with our algorithm help.
+The **Practice Mode** lets you play unlimited Wordle rounds with solver assistance.  
+- Enter guesses and see how the solver narrows down the solution space in real time.  
+- Use this mode to explore strategies or test how different starting words affect outcomes.  
+
+---
 
 <div align="center">
-  <img src="images/WordlePractice.gif" alt="Wordle Solver Demo" width="600"/>
-</div>
-<div align="center">
-  <img src="images/WordlePractice.gif" alt="Wordle Solver Demo" width="600"/>
+  <img src="images/BotInProgress.png" alt="Wordle Bot In Progress" width="600"/>
 </div>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The **Beat the Bot Mode** challenges you against the solver.  
+- The bot works in the background, simulating its own guesses.  
+- You play alongside it, trying to solve the puzzle in fewer moves than the algorithm.  
+
+---
+
+<div align="center">
+  <img src="images/BotSolved.png" alt="Beat the Bot Example" width="600"/>
+</div>
+
+Once the bot finishes, you can compare your performance:  
+- ✅ See how many guesses you used vs. the solver.  
+- 📊 Learn from the algorithm’s choices to improve your own Wordle skills.  
+
+👉 Together, these modes make the solver both a **practice tool** and a **fun competition**, letting you experiment with algorithms while enjoying the game.
+
 
 
 <h2 id="how-it-works">How It Works</h2>
@@ -123,11 +136,9 @@ And if you find the project useful, don’t forget to ⭐️ star the repo!
 
 <h2 id="contact">Contact</h2>
 
-Richard Guo - rwg2125@columbia.edu
+Richard Guo - [rwg2125@columbia.edu](mailto:rwg2125@columbia.edu)  
+Project Link: [WordleBotPractice](https://github.com/RichardGuo24/WordleBotPractice)
 
-Project Link: [https://github.com/RichardGuo24/WordleBotPractice](https://github.com/RichardGuo24/WordleBotPractice)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -135,7 +146,6 @@ Project Link: [https://github.com/RichardGuo24/WordleBotPractice](https://github
 
 Shout out to the friends at Jane Street that helped me get started on this project over a year ago. Came back to improve on the algorithm and also put it on a fullstack application.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
@@ -156,4 +166,3 @@ Shout out to the friends at Jane Street that helped me get started on this proje
 [React-url]: https://reactjs.org/
 [Flask]: https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white
 [Flask-url]: https://flask.palletsprojects.com/
-will be ignored by the browser. -->
